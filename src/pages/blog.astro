@@ -1,4 +1,9 @@
 ---
+import '../styles/global.css'
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BlogInformation from '../components/BlogInformation.astro';
+
 const pageTitle = "Blog";
 ---
 
@@ -11,10 +16,9 @@ const pageTitle = "Blog";
 		<title>{pageTitle}</title>
 	</head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+        <Header />
 
+        <BlogInformation/>
         <h1>{pageTitle}</h1>
         <h2>which means that I can do anything!</h2>      
         <p>I am going to post about my journy learning Astro.</p>
@@ -24,6 +28,8 @@ const pageTitle = "Blog";
           <li><a href="/posts/post-3/">Post 3</li>
 
         </ul>
+
+        <Footer />
 
       </body>
 </html>
